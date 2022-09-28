@@ -49,5 +49,4 @@ public apagar(id : number){
    this.list();
  }
 
-
 }

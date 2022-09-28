@@ -5,10 +5,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { AuthGuardService } from './guards/auth-guard.service';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +22,8 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthGuardService]
+,
   bootstrap: [AppComponent]
 })
 export class AppModule { }

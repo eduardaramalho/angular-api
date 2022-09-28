@@ -1,0 +1,25 @@
+<div class="container-contatos">
+    <h1>Contatos</h1>
+    <div class="contato-input">
+        <input type="text" placeholder="Insira o seu nome" [(ngModel)]="nome">
+        <br>
+        <input type="text" placeholder="Insira o seu contato" [(ngModel)]="contato">
+        <br>
+        <button type="submit" (click)="cadastro()">Salvar contato</button>
+    </div>
+</div>
+<div class="container-result">
+    <h1>Lista de contatos</h1>
+    <button type="submit" (click)="list()">Buscar</button>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+        </tr>
+        <tr *ngFor="let pessoa of pessoas">
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.telefone}}</td>
+            <td (click)="apagar(pessoa.idcadastro)">&#x274C;</td>
+        </tr>
+    </table>
+</div>
